@@ -2,14 +2,24 @@ import Image from 'next/image'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { IoMdInformationCircleOutline, IoMdBus } from 'react-icons/io'
 import { BsWhatsapp, BsInstagram, BsFacebook, BsGithub } from 'react-icons/bs'
+import { GrLaunch } from 'react-icons/gr'
 import { TbRoute } from 'react-icons/tb'
 import { MdPayment, MdVerifiedUser } from 'react-icons/md'
 import { Navbar } from '@busconnect/components/navbar'
 import { Footer } from '@busconnect/components/footer'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 
 export function Main() {
+  const [launchDate, setLaunchDate] = useState(new Date('2023-05-26T00:00:00.000-03:00'))
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLaunchDate(new Date('2023-05-26T00:00:00.000-03:00'))
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
   return (
     <div className="">
       <div className="hidden lg:flex justify-center">
@@ -23,11 +33,17 @@ export function Main() {
               <h1 className="text-4xl font-bold text-[#553399]">
                 A BusConnect te leva muito mais longe
               </h1>
+              <p className="text-xl text-white font-bold">
+                Faltam {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dias,{' '}
+                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60)) % 24} horas,{' '}
+                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60)) % 60} minutos e{' '}
+                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000)) % 60} segundos para o lançamento oficial.
+              </p>
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
               </p>
               <button className="btn btn-success">WhatsApp</button>
-            </div>
+              </div>
           </div>
           <div className="hero hero-content flex flex-col w-1/3 p-8">
             <h1 className="text-4xl font-bold text-[#553399]">
@@ -58,6 +74,12 @@ export function Main() {
               <h1 className="text-4xl font-bold text-[#553399]">
                 A BusConnect te leva muito mais longe
               </h1>
+              <p className="text-xl text-white font-bold">
+                Faltam {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dias,{' '}
+                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60)) % 24} horas,{' '}
+                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60)) % 60} minutos e{' '}
+                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000)) % 60} segundos para o lançamento oficial.
+              </p>
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
               </p>
