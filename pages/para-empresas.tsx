@@ -56,7 +56,7 @@ export function Main() {
         <p className="flex flex-col justify-center w-1/2 text-center">
           Entre em contato conosco através do Whatsapp, clicando no botão abaixo.
         </p>
-        <Link href='https://api.whatsapp.com/send?phone=5511999999999'>
+        <Link href='https://api.whatsapp.com/send?phone=558183064666'>
           <button className="bg-white text-[#F74] p-4 rounded-lg">
             Fale Conosco
           </button>

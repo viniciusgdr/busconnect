@@ -34,7 +34,7 @@ export function Main() {
         >
           <div className="hero flex flex-col items-center">
             <div className="p-[45px] text-center">
-              <h1 className="text-4xl font-bold text-[#553399]">
+              <h1 className="text-4xl font-bold text-[#553399] p-2">
                 A BusConnect te leva muito mais longe
               </h1>
               <p className="text-xl font-bold">
@@ -43,8 +43,11 @@ export function Main() {
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
               </p>
-              <button className="btn btn-success">WhatsApp</button>
-              </div>
+              <a className="btn btn-success btn-sm rounded-btn " href='https://wa.me/558183064666'>
+                <BsWhatsapp size={20} />{' '}
+                Abrir o WhatsApp
+              </a>
+            </div>
           </div>
           <div className="hero hero-content flex flex-col w-1/3 p-4">
             <h1 className="text-4xl font-bold text-[#553399]">
@@ -174,7 +177,7 @@ export function Services() {
         <p className="text-xl text-white">
           Trace rotas para ir de uma lugar para outro e tenha as melhores opções até o destino.
         </p>
-        <TbRoute size={250} color="#553399"/>
+        <TbRoute size={250} color="#553399" />
       </div>
       <div className="flex flex-col justify-center w-auto items-center self-center  rounded-md p-4">
         <MdPayment
@@ -182,12 +185,12 @@ export function Services() {
           color='#F74'
         />
         <h1 className="text-4xl font-bold text-white">
-        Recarga Digital a qualquer momento
+          Recarga Digital a qualquer momento
         </h1>
         <p className="text-xl text-white">
-        Recarregue seu Cartão direto pelo WhatsApp via PIX!
+          Recarregue seu Cartão direto pelo WhatsApp via PIX!
         </p>
-        <MdVerifiedUser size={250} color="#553399"/>
+        <MdVerifiedUser size={250} color="#553399" />
       </div>
       <h1 className="text-4xl font-bold p-8 text-center">Veja como funciona!</h1>
       <div className="border-solid border-2 border-sky-500 flex flex-col justify-center w-auto bg-black self-center rounded-lg p-8">
@@ -229,7 +232,7 @@ export default function Home() {
       <Main />
       <Services />
       <Partnerships />
-      <Footer  />
+      <Footer />
     </>
   )
 }

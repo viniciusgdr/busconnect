@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
 import { MdDarkMode } from 'react-icons/md'
 import Link from 'next/link'
+import { BsWhatsapp } from 'react-icons/bs'
 
 export function Navbar() {
   const toggleDarkMode = () => {
@@ -53,6 +53,10 @@ export function Navbar() {
                   )
                 })
               }
+              <a className="btn btn-success btn-sm rounded-btn" href='https://wa.me/558183064666'>
+                <BsWhatsapp size={20} />{' '}
+                Abrir o WhatsApp
+              </a>
             </ul>
           </div>
           <div className="hidden lg:flex">
@@ -65,6 +69,12 @@ export function Navbar() {
                 )
               })
             }
+            <div className="flex items-stretch">
+              <a className="btn btn-success btn-sm rounded-btn" href='https://wa.me/558183064666'>
+                <BsWhatsapp size={20} />{' '}
+                Abrir o WhatsApp
+              </a>
+            </div>
           </div>
         </div>
         <div className="navbar-end">
