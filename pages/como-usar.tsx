@@ -143,7 +143,7 @@ export default function Home() {
     <>
       <Navbar />
       <Terms />
-      <Footer />
+      <Footer color='#F74' image='/busconnectlogo-2.png' />
     </>
   )
 }
