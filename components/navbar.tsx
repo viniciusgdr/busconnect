@@ -7,12 +7,15 @@ export function Navbar() {
   const [modeDark, setModeDark] = useState(false)
 
   useEffect(() => {
+    const modeDark = localStorage.getItem('modeDark')
     document.documentElement.removeAttribute('data-theme')
-    if (modeDark) {
+    if (modeDark === 'false' || modeDark === null) {
       document.documentElement.setAttribute('data-theme', 'dark')
+      localStorage.setItem('modeDark', 'true')
     }
     else {
       document.documentElement.setAttribute('data-theme', 'light')
+      localStorage.setItem('modeDark', 'false')
     }
   })
 
