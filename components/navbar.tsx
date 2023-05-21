@@ -4,9 +4,7 @@ import { MdDarkMode } from 'react-icons/md'
 import Link from 'next/link'
 
 export function Navbar() {
-  const [modeDark, setModeDark] = useState(false)
-
-  useEffect(() => {
+  const toggleDarkMode = () => {
     const modeDark = localStorage.getItem('modeDark')
     document.documentElement.removeAttribute('data-theme')
     if (modeDark === 'false' || modeDark === null) {
@@ -17,7 +15,7 @@ export function Navbar() {
       document.documentElement.setAttribute('data-theme', 'light')
       localStorage.setItem('modeDark', 'false')
     }
-  })
+  }
 
   const items = [
     { name: 'Quem somos', href: '/quem-somos', subitems: [] },
@@ -119,11 +117,7 @@ export function Navbar() {
         <div className="navbar-end">
           <button
             className="btn btn-square btn-ghost"
-            onClick={
-              () => {
-                setModeDark(!modeDark)
-              }
-            }
+            onClick={toggleDarkMode}
           >
             <MdDarkMode />
           </button>
