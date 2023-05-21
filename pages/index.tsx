@@ -292,7 +292,7 @@ export function Services() {
         <MdVerifiedUser size={250} color="#553399"/>
       </div>
       <h1 className="text-4xl font-bold p-8 text-center">Veja como funciona!</h1>
-      <div className="border-solid border-2 border-sky-500 flex flex-col justify-center w-1/2 bg-black self-center rounded-lg p-8">
+      <div className="border-solid border-2 border-sky-500 flex flex-col justify-center w-auto bg-black self-center rounded-lg p-8">
         <div className="chat chat-end">
           <div className="chat-bubble">Oi!</div>
         </div>
