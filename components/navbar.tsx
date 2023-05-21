@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { MdDarkMode } from 'react-icons/md'
+import Link from 'next/link'
 
 export function Navbar() {
   const [modeDark, setModeDark] = useState(false)
@@ -65,7 +65,7 @@ export function Navbar() {
                             item.subitems.map((subitem, index) => {
                               return (
                                 <li key={index}>
-                                  <a href={subitem.href}>{subitem.name}</a>
+                                  <Link href={subitem.href}>{subitem.name}</Link>
                                 </li>
                               )
                             })
@@ -74,7 +74,7 @@ export function Navbar() {
                       </li>
                     ) : (
                       <li key={index} className='hover-bordered'>
-                        <a href={item.href}>{item.name}</a>
+                        <Link href={item.href}>{item.name}</Link>
                       </li>
                     )
                   )
@@ -96,7 +96,7 @@ export function Navbar() {
                           item.subitems.map((subitem, index) => {
                             return (
                               <li key={index}>
-                                <a href={subitem.href}>{subitem.name}</a>
+                                <Link href={subitem.href}>{subitem.name}</Link>
                               </li>
                             )
                           })
@@ -105,7 +105,7 @@ export function Navbar() {
                     </div>
                   ) : (
                     <div key={index} className="flex items-stretch">
-                      <a className="btn btn-ghost btn-sm rounded-btn" href={item.href}>{item.name}</a>
+                      <Link className="btn btn-ghost btn-sm rounded-btn" href={item.href}>{item.name}</Link>
                     </div>
                   )
                 )

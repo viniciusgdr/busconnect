@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { BsWhatsapp, BsInstagram, BsFacebook, BsGithub } from 'react-icons/bs'
+import Link from 'next/link'
 
 export function Footer() {
   return (
@@ -9,9 +10,9 @@ export function Footer() {
         <BsInstagram />
         <BsFacebook />
         <BsWhatsapp />
-        <a href='https://github.com/viniciusgdr'>
+        <Link href='https://github.com/viniciusgdr'>
           <BsGithub />
-        </a>
+        </Link>
       </div>
       <div className="text-center">
         <p>BusConnect - Uma Empresa Fictícia feita por Vinícius</p>

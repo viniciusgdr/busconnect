@@ -6,6 +6,7 @@ import { TbRoute } from 'react-icons/tb'
 import { MdPayment, MdVerifiedUser } from 'react-icons/md'
 import { Navbar } from '@busconnect/components/navbar'
 import { Footer } from '@busconnect/components/footer'
+import Link from 'next/link'
 
 
 export function Main() {
@@ -194,7 +195,7 @@ export function Services() {
         </button>
         <p className="underline-offset-0	italic text-white">
           Ao Continuar você concorda com todos os{' '}
-          <a href="/termos" className="text-blue-400 visited:text-purple-600"> termos </a>{' '}
+          <Link href="/termos" className="text-blue-400 visited:text-purple-600"> termos </Link>{' '}
           de serviço.
         </p>
       </div>
