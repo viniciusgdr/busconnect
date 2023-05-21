@@ -17,7 +17,7 @@ export function Main() {
         <h1 className="text-4xl font-bold text-white">
           Tecnologias
         </h1>
-        <p className="text-xl text-white w-1/3 p-4">
+        <p className="flex flex-col justify-center w-1/2">
           Acreditamos que, para mudar o transporte público no país, não só podemos como devemos usar a tecnologia a favor da sociedade. Pensando nisso, desenvolvemos alguns produtos que vêm facilitando o dia a dia não somente de passageiros, mas também de empresas de transporte e órgãos gestores.
         </p>
       </div>
@@ -29,7 +29,7 @@ export function Main() {
         <h1 className="text-4xl font-bold text-white">
           Recarga Digital
         </h1>
-        <p className="text-xl text-white  w-1/3 p-4">
+        <p className="flex flex-col justify-center w-1/2">
           Os Usuários do transporte público podem recarregar seus cartões de transporte de forma rápida e segura, sem precisar sair de casa. A recarga é feita pelo aplicativo, com cartão de crédito ou débito, e o crédito é disponibilizado em até 24 horas.
         </p>
       </div>
@@ -41,7 +41,7 @@ export function Main() {
         <h1 className="text-4xl font-bold text-white">
           Bilhetagem Eletrônica
         </h1>
-        <p className="text-xl text-white  w-1/3 p-4">
+        <p className="flex flex-col justify-center w-1/2">
           A Bilhetagem Eletrônica é uma solução completa para o gerenciamento de transporte público. Com ela, é possível realizar a gestão de receitas, controle de frota, emissão de relatórios e muito mais.
         </p>
       </div>
@@ -53,7 +53,7 @@ export function Main() {
         <h1 className="text-4xl font-bold text-white">
           Fale Conosco
         </h1>
-        <p className="text-xl text-white  w-1/3 p-4 text-center">
+        <p className="flex flex-col justify-center w-1/2 text-center">
           Entre em contato conosco através do Whatsapp, clicando no botão abaixo.
         </p>
         <Link href='https://api.whatsapp.com/send?phone=5511999999999'>
