@@ -18,24 +18,13 @@ export function Navbar() {
   }
 
   const items = [
-    { name: 'Quem somos', href: '/quem-somos', subitems: [] },
-    // {
-    //   name: 'Serviços',
-    //   href: '/servicos',
-    //   subitems: [
-    //     { name: 'Previsão de Ônibus', href: '/previsao-de-onibus' },
-    //     { name: 'Recarga pelo WhatsApp', href: '/recarga-pelo-whatsapp' }
-    //   ]
-    // },
-    { name: 'Como Usar', href: '/como-usar', subitems: [] },
+    { name: 'Quem somos', href: '/quem-somos' },
+    { name: 'Como Usar', href: '/como-usar' },
     {
       name: 'Para Empresas',
-      href: '/',
-      subitems: [
-        { name: 'Adicione sua Empresa', href: '/adicione-sua-empresa' }
-      ]
+      href: '/para-empresas'
     },
-    { name: 'Fale Conosco', href: '/contato', subitems: [] },
+    { name: 'Fale Conosco', href: '/contato' },
   ]
   return (
     <div>
@@ -58,26 +47,9 @@ export function Navbar() {
               {
                 items.map((item, index) => {
                   return (
-                    item.subitems.length ? (
-                      <li key={index}>
-                        <a>{item.name}</a>
-                        <ul tabIndex={index} className="menu menu-compact dropdown dropdown-end shadow bg-slate-600 rounded-box w-52">
-                          {
-                            item.subitems.map((subitem, index) => {
-                              return (
-                                <li key={index}>
-                                  <Link href={subitem.href}>{subitem.name}</Link>
-                                </li>
-                              )
-                            })
-                          }
-                        </ul>
-                      </li>
-                    ) : (
-                      <li key={index} className='hover-bordered'>
-                        <Link href={item.href}>{item.name}</Link>
-                      </li>
-                    )
+                    <li key={index} className='hover-bordered'>
+                      <Link href={item.href}>{item.name}</Link>
+                    </li>
                   )
                 })
               }
@@ -87,28 +59,9 @@ export function Navbar() {
             {
               items.map((item, index) => {
                 return (
-                  item.subitems.length ? (
-                    <div key={index} className="dropdown dropdown-hover dropdown-end">
-                      <div tabIndex={0} className="btn btn-ghost btn-sm rounded-btn">
-                        {item.name}
-                      </div>
-                      <ul tabIndex={0} className="shadow menu dropdown-content bg-slate-600 rounded-box w-52">
-                        {
-                          item.subitems.map((subitem, index) => {
-                            return (
-                              <li key={index}>
-                                <Link href={subitem.href}>{subitem.name}</Link>
-                              </li>
-                            )
-                          })
-                        }
-                      </ul>
-                    </div>
-                  ) : (
-                    <div key={index} className="flex items-stretch">
-                      <Link className="btn btn-ghost btn-sm rounded-btn" href={item.href}>{item.name}</Link>
-                    </div>
-                  )
+                  <div key={index} className="flex items-stretch">
+                    <Link className="btn btn-ghost btn-sm rounded-btn" href={item.href}>{item.name}</Link>
+                  </div>
                 )
               })
             }
