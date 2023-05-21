@@ -229,7 +229,7 @@ export default function Home() {
       <Main />
       <Services />
       <Partnerships />
-      <Footer />
+      <Footer  />
     </>
   )
 }
