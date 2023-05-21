@@ -13,13 +13,17 @@ import { useEffect, useState } from 'react'
 
 export function Main() {
   const [launchDate, setLaunchDate] = useState(new Date('2023-05-26T00:00:00.000-03:00'))
+  const [launchDateText, setLaunchDateText] = useState('Em breve você poderá usar o BusConnect')
 
   useEffect(() => {
     const interval = setInterval(() => {
       setLaunchDate(new Date('2023-05-26T00:00:00.000-03:00'))
+      setLaunchDateText(`Faltam ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dias, ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60)) % 24} horas, ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60)) % 60} minutos e ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000)) % 60} segundos para o lançamento oficial.`)
     }, 1000)
     return () => clearInterval(interval)
-  }, [])
+  }, [
+    launchDate,
+  ])
   return (
     <div className="">
       <div className="hidden lg:flex justify-center">
@@ -33,11 +37,8 @@ export function Main() {
               <h1 className="text-4xl font-bold text-[#553399]">
                 A BusConnect te leva muito mais longe
               </h1>
-              <p className="text-xl text-white font-bold">
-                Faltam {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dias,{' '}
-                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60)) % 24} horas,{' '}
-                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60)) % 60} minutos e{' '}
-                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000)) % 60} segundos para o lançamento oficial.
+              <p className="text-xl font-bold">
+                {launchDateText}
               </p>
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
@@ -45,7 +46,7 @@ export function Main() {
               <button className="btn btn-success">WhatsApp</button>
               </div>
           </div>
-          <div className="hero hero-content flex flex-col w-1/3 p-8">
+          <div className="hero hero-content flex flex-col w-1/3 p-4">
             <h1 className="text-4xl font-bold text-[#553399]">
               Não durma no ponto
             </h1>
@@ -57,7 +58,7 @@ export function Main() {
               color='#F74'
             />
           </div>
-          <div className="hero hero-content flex flex-col w-1/3 p-8">
+          <div className="hero hero-content flex flex-col w-1/3 p-4">
             <h1 className="text-4xl font-bold text-[#553399]">
               Todas as informações do seu ônibus a um clique
             </h1>
@@ -75,10 +76,7 @@ export function Main() {
                 A BusConnect te leva muito mais longe
               </h1>
               <p className="text-xl text-white font-bold">
-                Faltam {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dias,{' '}
-                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60)) % 24} horas,{' '}
-                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60)) % 60} minutos e{' '}
-                {Math.floor((launchDate.getTime() - new Date().getTime()) / (1000)) % 60} segundos para o lançamento oficial.
+                {launchDateText}
               </p>
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
