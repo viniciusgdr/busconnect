@@ -21,14 +21,14 @@ export function Navbar() {
 
   const items = [
     { name: 'Quem somos', href: '/quem-somos', subitems: [] },
-    {
-      name: 'Serviços',
-      href: '/servicos',
-      subitems: [
-        { name: 'Previsão de Ônibus', href: '/previsao-de-onibus' },
-        { name: 'Recarga pelo WhatsApp', href: '/recarga-pelo-whatsapp' }
-      ]
-    },
+    // {
+    //   name: 'Serviços',
+    //   href: '/servicos',
+    //   subitems: [
+    //     { name: 'Previsão de Ônibus', href: '/previsao-de-onibus' },
+    //     { name: 'Recarga pelo WhatsApp', href: '/recarga-pelo-whatsapp' }
+    //   ]
+    // },
     { name: 'Como Usar', href: '/como-usar', subitems: [] },
     {
       name: 'Para Empresas',
@@ -37,7 +37,7 @@ export function Navbar() {
         { name: 'Adicione sua Empresa', href: '/adicione-sua-empresa' }
       ]
     },
-    { name: 'Fale Conosco', href: '/', subitems: [] },
+    { name: 'Fale Conosco', href: '/contato', subitems: [] },
   ]
   return (
     <div>
