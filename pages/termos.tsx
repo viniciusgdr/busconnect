@@ -18,7 +18,6 @@ export function Terms() {
     </div>
   )
 }
-
 export default function Home() {
   return (
     <>
