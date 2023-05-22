@@ -43,10 +43,10 @@ export function Main() {
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
               </p>
-              <a className="btn btn-success btn-sm rounded-btn " href='https://wa.me/558183064666'>
+              <Link className="btn btn-success btn-sm rounded-btn " href='https://wa.me/558183064666'>
                 <BsWhatsapp size={20} />{' '}
                 Abrir o WhatsApp
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hero hero-content flex flex-col w-1/3 p-4">
