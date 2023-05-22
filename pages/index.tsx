@@ -9,6 +9,7 @@ import { Navbar } from '@busconnect/components/navbar'
 import { Footer } from '@busconnect/components/footer'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import AnimatedElement from '@busconnect/components/animated'
 
 
 export function Main() {
@@ -120,19 +121,21 @@ export function Main() {
 export function Partnerships() {
   return (
     <div className="bg-gradient-to-b from-[#F74] to-[#553399] flex flex-col py-16">
-      <div className="mb-12 text-center">
-        <h1 className="text-6xl font-bold text-white">
-          Empresas Participantes
-        </h1>
-        <p className="mt-4 text-xl md:px-20 text-white">
-          Conheça as empresas que fazem o BusConnect acontecer
-        </p>
-      </div>
-      <div className="flex flex-col md:flex-row justify-center">
-        <div className="flex flex-col items-center">
-          <Image src="/cooperune.png" alt="Logo" width={500} height={150} className="p-4" />
+      <AnimatedElement>
+        <div className="mb-12 text-center">
+          <h1 className="text-6xl font-bold text-white">
+            Empresas Participantes
+          </h1>
+          <p className="mt-4 text-xl md:px-20 text-white">
+            Conheça as empresas que fazem o BusConnect acontecer
+          </p>
         </div>
-      </div>
+        <div className="flex flex-col md:flex-row justify-center">
+          <div className="flex flex-col items-center">
+            <Image src="/cooperune.png" alt="Logo" width={500} height={150} className="p-4" />
+          </div>
+        </div>
+      </AnimatedElement>
     </div>
   )
 }
