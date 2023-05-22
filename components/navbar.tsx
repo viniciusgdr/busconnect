@@ -70,9 +70,9 @@ export function Navbar() {
               })
             }
             <div className="flex items-stretch">
-            <a className="btn btn-secondary btn-sm rounded-btn " href='/app'>
+              <Link className="btn btn-secondary btn-sm rounded-btn " href='/app'>
                 App Online
-              </a>
+              </Link>
             </div>
           </div>
         </div>
