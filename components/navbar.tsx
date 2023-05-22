@@ -70,9 +70,8 @@ export function Navbar() {
               })
             }
             <div className="flex items-stretch">
-              <a className="btn btn-success btn-sm rounded-btn" href='https://wa.me/558183064666'>
-                <BsWhatsapp size={20} />{' '}
-                Abrir o WhatsApp
+            <a className="btn btn-secondary btn-sm rounded-btn " href='/app'>
+                App Online
               </a>
             </div>
           </div>
