@@ -30,3 +30,68 @@
 .animate-fade-in-left {
   animation: fadeInLeft .8s ease-in-out;
 }
+@keyframes typewriter1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 23.8em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(0, 0, 0, .75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      -webkit-transform: translateY(2rem);
+      transform: translateY(2rem)
+  }
+
+  100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0)
+  }
+}
+.container-animate {
+  margin-top: 3rem;
+  /* -webkit-animation:fadeInUp .5s; */
+  animation: fadeInUp .5s;
+}
+
+.animate-text {
+  max-width: 100%;
+  animation: typewriter1 0.4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite none;
+}
+
+
+
+.bubble {
+  position: relative;
+  overflow: hidden;
+}
+
+#typing-text {
+  position: relative;
+  left: 10px; /* Posição inicial do texto */
+  top: 50%;
+  overflow: hidden;
+  animation: typing 1s steps(40, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

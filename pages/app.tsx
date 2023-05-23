@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-export function MainPage(props: { setLocal: any }) {
+export function MainPage() {
   return (
     <div
       className="animate-fade-in-left bg-[#0a2342] h-screen flex flex-col items-center justify-center text-white">
@@ -9,14 +9,10 @@ export function MainPage(props: { setLocal: any }) {
         Olá! Seja bem vindo ao Chat da BusConnect!
       </h1>
       <p className="pb-4">Iremos te guiar a partir de agora.</p>
-      <button
+      <a
+        href="/chat"
         className="btn btn-success rounded-lg text-center bg-[#63bf2d]"
-        onClick={
-          () => {
-            props.setLocal({ state: 1 })
-          }
-        }
-      >Vamos começar?</button>
+      >Vamos começar?</a>
       <p className="underline-offset-0	italic text-white">
         *Ao Continuar você concorda com todos os{' '}
         <Link href="/termos" className="text-blue-400 visited:text-purple-600"> termos </Link>{' '}
@@ -26,16 +22,8 @@ export function MainPage(props: { setLocal: any }) {
   )
 }
 export function App() {
-  const [local, setLocal] = useState({
-    state: 0
-  })
-  useEffect(() => {
-    if (local.state === 1) {
-      window.location.href = '/chat'
-    }
-  }, [local]);
   return (
-    <MainPage setLocal={setLocal} />
+    <MainPage  />
   );
 }
 export default function Home() {
