@@ -9,10 +9,10 @@ export function MainPage() {
         Olá! Seja bem vindo ao Chat da BusConnect!
       </h1>
       <p className="pb-4">Iremos te guiar a partir de agora.</p>
-      <a
+      <Link
         href="/chat"
         className="btn btn-success rounded-lg text-center bg-[#63bf2d]"
-      >Vamos começar?</a>
+      >Vamos começar?</Link>
       <p className="underline-offset-0	italic text-white">
         *Ao Continuar você concorda com todos os{' '}
         <Link href="/termos" className="text-blue-400 visited:text-purple-600"> termos </Link>{' '}

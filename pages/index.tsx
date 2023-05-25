@@ -42,9 +42,9 @@ export function Main() {
                 {launchDateText}
               </p>
               <p className="text-xl text-[#F74] font-bold">
-                Se locomover em Camaragibe nunca foi tão prático e rápido
+                Se locomover na cidade nunca foi tão prático e rápido
               </p>
-              <Link className="btn btn-success btn-sm rounded-btn " href='https://wa.me/558183064666'>
+              <Link className="btn btn-success btn-sm rounded-btn " href='https://wa.me/15550457730'>
                 <BsWhatsapp size={20} />{' '}
                 Abrir o WhatsApp
               </Link>
@@ -85,7 +85,10 @@ export function Main() {
               <p className="text-xl text-[#F74] font-bold">
                 Se locomover em Camaragibe nunca foi tão prático e rápido
               </p>
-              <button className="btn btn-success">WhatsApp</button>
+              <Link className="btn btn-success" href='https://wa.me/15550457730'>
+                <BsWhatsapp size={20} />{' '}
+                Abrir o WhatsApp
+              </Link>
             </div>
           </div>
           <div className="hero hero-content flex flex-col">
@@ -215,10 +218,10 @@ export function Services() {
             3 - Recarregar seu Cartão BEM<br />
           </div>
         </div>
-        <button className="btn btn-success">
-          <BsWhatsapp size={20} />
-          Continuar no WhatsApp
-        </button>
+        <Link className="btn btn-success" href='https://wa.me/15550457730'>
+          <BsWhatsapp size={20} />{' '}
+          Continuar o WhatsApp
+        </Link>
         <p className="underline-offset-0	italic text-white">
           Ao Continuar você concorda com todos os{' '}
           <Link href="/termos" className="text-blue-400 visited:text-purple-600"> termos </Link>{' '}

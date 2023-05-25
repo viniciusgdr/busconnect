@@ -53,7 +53,7 @@ export function Navbar() {
                   )
                 })
               }
-              <a className="btn btn-success btn-sm rounded-btn" href='https://wa.me/558183064666'>
+              <a className="btn btn-success btn-sm rounded-btn" href='https://wa.me/15550457730'>
                 <BsWhatsapp size={20} />{' '}
                 Abrir o WhatsApp
               </a>
