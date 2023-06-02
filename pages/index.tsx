@@ -13,12 +13,12 @@ import AnimatedElement from '@busconnect/components/animated'
 
 
 export function Main() {
-  const [launchDate, setLaunchDate] = useState(new Date('2023-05-26T00:00:00.000-03:00'))
+  const [launchDate, setLaunchDate] = useState(new Date('2023-06-18T00:00:00.000-03:00'))
   const [launchDateText, setLaunchDateText] = useState('Em breve você poderá usar o BusConnect')
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setLaunchDate(new Date('2023-05-26T00:00:00.000-03:00'))
+      setLaunchDate(new Date('2023-06-18T00:00:00.000-03:00'))
       setLaunchDateText(`Faltam ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24))} dias, ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60 * 60)) % 24} horas, ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000 * 60)) % 60} minutos e ${Math.floor((launchDate.getTime() - new Date().getTime()) / (1000)) % 60} segundos para o lançamento oficial.`)
     }, 1000)
     return () => clearInterval(interval)
